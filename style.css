@@ -468,21 +468,30 @@ em {
    FACHADA E VISITA
 ========================= */
 
+
+/* =========================
+   SEÇÃO VISITE NOSSA LOJA
+========================= */
+
 .store-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  min-height: 285px;
+  height: 320px;
+  overflow: hidden;
   background: #0c121a;
 }
 
 .store-photo {
+  width: 100%;
+  height: 320px;
   overflow: hidden;
 }
 
 .store-photo img {
+  width: 100%;
   height: 100%;
-  min-height: 285px;
   object-fit: cover;
+  object-position: center;
 }
 
 .store-message {
@@ -491,16 +500,44 @@ em {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
+  background: #0c121a;
 }
 
 .store-message h2 {
-  font-size: 38px;
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.store-message p {
+  font-size: 12px;
+  color: #a8b2bf;
 }
 
 .store-location {
-  margin: 13px 0 18px;
-  font-size: 20px;
+  margin: 12px 0;
+  font-size: 18px;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+  .store-section {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .store-photo {
+    height: 220px;
+  }
+
+  .store-photo:last-child {
+    display: none;
+  }
+
+  .store-message {
+    min-height: 250px;
+    padding: 30px 15px;
+  }
 }
 
 /* =========================
@@ -732,3 +769,4 @@ em {
   }
 
 }
+
