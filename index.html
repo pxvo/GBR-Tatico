@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GBR Equipamentos Táticos | Mochilas, facas, cintos e acessórios</title>
+<meta name="description" content="Loja de equipamentos táticos: mochilas, canivetes, cintos, coldres e lanternas. Fale com a GBR pelo WhatsApp.">
+<link rel="icon" href="img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topo" id="topo">
+  <a href="#inicio" class="marca"><img src="img/logo.svg" alt="GBR Equipamentos Táticos"></a>
+  <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav id="nav">
+    <a href="#produtos">Produtos</a><a href="#diferenciais">Por que a GBR</a><a href="#visita">Visite a loja</a>
+    <a class="btn btn-zap" data-zap href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-txt">
+    <p class="status" id="status" aria-live="polite"></p>
+    <h1>Equipamento tático para quem leva o trabalho a sério.</h1>
+    <p>Mochilas, canivetes, cintos, coldres e lanternas de marcas como Invictus e NTK. Venha ver de perto ou peça pelo WhatsApp.</p>
+    <div class="acoes">
+      <a class="btn btn-zap" data-zap href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn btn-borda" href="#produtos">Ver produtos</a>
+    </div>
+  </div>
+  <div class="hero-foto ph" data-foto="img/fachada.jpg" data-rotulo="Foto da fachada ou da loja"></div>
+</section>
+
+<section class="secao" id="produtos">
+  <h2>O que você encontra na loja</h2>
+  <div class="filtros" role="group" aria-label="Filtrar por categoria" id="filtros"></div>
+  <div class="grade" id="grade"></div>
+  <p class="nota">Valores e disponibilidade: consulte pelo WhatsApp.</p>
+</section>
+
+<section class="secao claro" id="diferenciais">
+  <h2>Por que comprar na GBR</h2>
+  <div class="difs">
+    <article><h3>Veja antes de levar</h3><p>Produtos expostos na loja para você segurar, testar e comparar.</p></article>
+    <article><h3>Marcas conhecidas</h3><p>Linhas de equipamento de uso real, de mochilas a canivetes.</p></article>
+    <article><h3>Atendimento direto</h3><p>Tire dúvidas e peça o item pelo WhatsApp, sem enrolação.</p></article>
+  </div>
+</section>
+
+<section class="secao" id="galeria">
+  <h2>Dentro da loja</h2>
+  <div class="galeria">
+    <div class="ph" data-foto="img/loja-1.jpg" data-rotulo="Foto da loja 1"></div>
+    <div class="ph" data-foto="img/loja-2.jpg" data-rotulo="Foto da loja 2"></div>
+    <div class="ph" data-foto="img/loja-3.jpg" data-rotulo="Foto da loja 3"></div>
+  </div>
+</section>
+
+<section class="secao visita" id="visita">
+  <div>
+    <h2>Visite a loja</h2>
+    <p class="end">[Endereço da loja: rua, número, bairro, cidade]</p>
+    <table class="horas">
+      <caption class="sr">Horário de funcionamento</caption>
+      <tr data-dias="1,2,3,4,5"><th>Segunda a sexta</th><td>08h–12h e 14h–18h</td></tr>
+      <tr data-dias="6"><th>Sábado</th><td>08h–12h</td></tr>
+      <tr data-dias="0"><th>Domingo</th><td>Fechado</td></tr>
+    </table>
+    <div class="acoes">
+      <a class="btn btn-zap" data-zap href="#" target="_blank" rel="noopener">WhatsApp (95) 99135-7558</a>
+      <a class="btn btn-borda" href="https://instagram.com/gbr_tatico" target="_blank" rel="noopener">Instagram @gbr_tatico</a>
+    </div>
+  </div>
+  <div class="mapa">
+    <!-- Cole aqui o iframe do Google Maps (Compartilhar > Incorporar mapa) -->
+    <div class="ph" data-rotulo="Mapa do Google Maps"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img src="img/logo.svg" alt="GBR Equipamentos Táticos">
+  <p>© <span id="ano"></span> GBR Equipamentos Táticos. Todos os direitos reservados.</p>
+</footer>
+
+<a class="zap-flutuante" data-zap href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.6.7.7-2.5-.2-.3A8 8 0 0 1 12 4Z"/></svg>
+</a>
+<script src="js/script.js"></script>
+</body>
+</html>

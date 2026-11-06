@@ -1,0 +1,94 @@
+:root{--carvao:#1c1f1d;--grafite:#272b28;--sulco:#141715;--areia:#c9b79c;--azul:#2f6bff;--azul-esc:#1b4fd6;--osso:#f1efe9;--texto:#e9e6df;--mudo:#a7a79f;--raio:6px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:'Barlow',system-ui,sans-serif;background:var(--carvao);color:var(--texto);line-height:1.6;font-size:1.05rem}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',sans-serif;line-height:1.05;letter-spacing:.01em}
+h1{font-size:clamp(2.6rem,6.5vw,4.8rem);font-weight:800;max-width:15ch}
+h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:1.5rem}
+h3{font-size:1.5rem;font-weight:700;margin-bottom:.4rem}
+:focus-visible{outline:3px solid var(--areia);outline-offset:3px}
+.sr{position:absolute;left:-9999px}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.6rem clamp(1rem,4vw,3rem);background:rgba(20,23,21,.94);backdrop-filter:blur(8px);border-bottom:1px solid #333a35}
+.marca img{height:52px;width:auto}
+nav{display:flex;align-items:center;gap:1.6rem}
+nav a:not(.btn){color:var(--texto);text-decoration:none;font-weight:500}
+nav a:not(.btn):hover{color:var(--areia)}
+.menu-btn{display:none;background:none;border:0;padding:.5rem;cursor:pointer}
+.menu-btn span{display:block;width:26px;height:3px;background:var(--texto);margin:5px 0;transition:.25s}
+.menu-btn[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.menu-btn[aria-expanded=true] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded=true] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* botões */
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:var(--raio);font-weight:600;text-decoration:none;border:2px solid transparent;transition:background .2s,transform .2s}
+.btn-zap{background:var(--azul);color:#fff}
+.btn-zap:hover{background:var(--azul-esc)}
+.btn-borda{border-color:var(--areia);color:var(--areia)}
+.btn-borda:hover{background:var(--areia);color:var(--carvao)}
+.acoes{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+
+/* fundo de painel ripado, como a parede da loja */
+.hero,.secao:not(.claro){background-image:repeating-linear-gradient(to bottom,transparent 0 46px,var(--sulco) 46px 50px)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:clamp(2.5rem,7vw,6rem) clamp(1rem,4vw,3rem);min-height:78vh}
+.hero-txt p:not(.status){max-width:46ch;margin-top:1.2rem;color:var(--mudo)}
+.hero-txt h1{background:var(--carvao);display:inline;box-shadow:.4rem 0 0 var(--carvao),-.4rem 0 0 var(--carvao);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.status{display:inline-block;margin-bottom:1.2rem;padding:.3rem .8rem;border-radius:99px;background:var(--grafite);font-size:.95rem;font-weight:600}
+.status::before{content:"";display:inline-block;width:.6rem;height:.6rem;border-radius:50%;margin-right:.5rem;background:var(--mudo)}
+.status.aberto::before{background:#3ddc84}
+.status.fechado::before{background:#ff6b5b}
+
+/* seções */
+.secao{padding:clamp(3rem,7vw,5.5rem) clamp(1rem,4vw,3rem)}
+.secao>*{max-width:1180px;margin-inline:auto}
+.secao.claro{background:var(--osso);color:var(--carvao)}
+.filtros{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.8rem}
+.filtros button{font:inherit;font-weight:600;padding:.5rem 1.1rem;border-radius:99px;border:2px solid var(--areia);background:var(--carvao);color:var(--areia);cursor:pointer}
+.filtros button[aria-pressed=true]{background:var(--areia);color:var(--carvao)}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem}
+.card{background:var(--grafite);border-radius:var(--raio);overflow:hidden;border:1px solid #3a413c;display:flex;flex-direction:column}
+.card .ph{aspect-ratio:1/1}
+.card div:last-child{padding:1rem;display:flex;flex-direction:column;gap:.2rem;flex:1}
+.card small{color:var(--areia);font-weight:600}
+.card h3{font-size:1.3rem;margin:0}
+.card a{margin-top:auto;padding-top:.6rem;color:#7fa6ff;font-weight:600;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.nota{margin-top:1.5rem;color:var(--mudo);font-size:.95rem}
+.difs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem}
+.difs article{border-top:4px solid var(--azul);padding-top:1rem}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.galeria .ph{aspect-ratio:4/3}
+
+/* espaço de foto */
+.ph{position:relative;background:var(--grafite);border-radius:var(--raio);overflow:hidden;min-height:140px}
+.ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.hero-foto{aspect-ratio:4/5}
+.ph.vazio::after{content:attr(data-rotulo);position:absolute;inset:.7rem;display:grid;place-items:center;text-align:center;padding:1rem;border:2px dashed #55605a;border-radius:var(--raio);color:var(--mudo);font-size:.9rem}
+
+/* visita */
+.visita{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.visita>*{max-width:none;margin:0}
+.end{color:var(--mudo);margin-bottom:1.2rem}
+.horas{border-collapse:collapse;width:100%;max-width:420px}
+.horas th,.horas td{text-align:left;padding:.6rem 0;border-bottom:1px solid #3a413c}
+.horas th{font-weight:600}
+.horas tr.hoje{color:var(--areia);font-weight:600}
+.mapa .ph,.mapa iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:var(--raio)}
+
+footer{display:flex;flex-direction:column;align-items:center;gap:.6rem;padding:2.5rem 1rem 5rem;background:var(--sulco);color:var(--mudo);font-size:.9rem}
+footer img{height:56px}
+.zap-flutuante{position:fixed;right:1.1rem;bottom:1.1rem;z-index:60;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:var(--azul);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.45)}
+.zap-flutuante:hover{background:var(--azul-esc)}
+
+@media (max-width:820px){
+ .menu-btn{display:block}
+ nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--sulco);padding:.5rem 1rem 1rem;display:none}
+ nav.aberto{display:flex}
+ nav a{padding:.8rem 0}
+ .hero,.visita{grid-template-columns:1fr}
+ .hero{min-height:0}
+ .hero-foto{aspect-ratio:4/3}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
