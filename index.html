@@ -1,95 +1,451 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GBR Equipamentos Táticos | Mochilas, facas, cintos e acessórios</title>
-<meta name="description" content="Loja de equipamentos táticos: mochilas, canivetes, cintos, coldres e lanternas. Fale com a GBR pelo WhatsApp.">
-<link rel="icon" href="img/logo.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBR Equipamentos Táticos</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topo" id="topo">
-  <a href="#inicio" class="marca"><img src="img/logo.svg" alt="GBR Equipamentos Táticos"></a>
-  <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
-  <nav id="nav">
-    <a href="#produtos">Produtos</a><a href="#diferenciais">Por que a GBR</a><a href="#visita">Visite a loja</a>
-    <a class="btn btn-zap" data-zap href="#" target="_blank" rel="noopener">WhatsApp</a>
-  </nav>
-</header>
 
-<main>
-<section class="hero" id="inicio">
-  <div class="hero-txt">
-    <p class="status" id="status" aria-live="polite"></p>
-    <h1>Equipamento tático para quem leva o trabalho a sério.</h1>
-    <p>Mochilas, canivetes, cintos, coldres e lanternas de marcas como Invictus e NTK. Venha ver de perto ou peça pelo WhatsApp.</p>
-    <div class="acoes">
-      <a class="btn btn-zap" data-zap href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-      <a class="btn btn-borda" href="#produtos">Ver produtos</a>
+  <!-- MENU -->
+  <header class="topbar" id="inicio">
+    <div class="container nav-wrap">
+
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">
+          <span>GBR</span><i></i>
+        </span>
+        <span class="brand-caption">EQUIPAMENTOS TÁTICOS</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-contact">
+        <a href="https://instagram.com/gbr_tatico">
+          Instagram
+        </a>
+        <a href="https://wa.me/5595991357558">
+          WhatsApp
+        </a>
+      </div>
+
     </div>
-  </div>
-  <div class="hero-foto ph" data-foto="img/fachada.jpg" data-rotulo="Foto da fachada ou da loja"></div>
-</section>
+  </header>
 
-<section class="secao" id="produtos">
-  <h2>O que você encontra na loja</h2>
-  <div class="filtros" role="group" aria-label="Filtrar por categoria" id="filtros"></div>
-  <div class="grade" id="grade"></div>
-  <p class="nota">Valores e disponibilidade: consulte pelo WhatsApp.</p>
-</section>
+  <!-- BANNER PRINCIPAL -->
+  <section class="hero">
+    <div class="hero-shade"></div>
 
-<section class="secao claro" id="diferenciais">
-  <h2>Por que comprar na GBR</h2>
-  <div class="difs">
-    <article><h3>Veja antes de levar</h3><p>Produtos expostos na loja para você segurar, testar e comparar.</p></article>
-    <article><h3>Marcas conhecidas</h3><p>Linhas de equipamento de uso real, de mochilas a canivetes.</p></article>
-    <article><h3>Atendimento direto</h3><p>Tire dúvidas e peça o item pelo WhatsApp, sem enrolação.</p></article>
-  </div>
-</section>
+    <div class="container hero-content">
 
-<section class="secao" id="galeria">
-  <h2>Dentro da loja</h2>
-  <div class="galeria">
-    <div class="ph" data-foto="img/loja-1.jpg" data-rotulo="Foto da loja 1"></div>
-    <div class="ph" data-foto="img/loja-2.jpg" data-rotulo="Foto da loja 2"></div>
-    <div class="ph" data-foto="img/loja-3.jpg" data-rotulo="Foto da loja 3"></div>
-  </div>
-</section>
+      <div class="hero-copy">
 
-<section class="secao visita" id="visita">
-  <div>
-    <h2>Visite a loja</h2>
-    <p class="end">[Endereço da loja: rua, número, bairro, cidade]</p>
-    <table class="horas">
-      <caption class="sr">Horário de funcionamento</caption>
-      <tr data-dias="1,2,3,4,5"><th>Segunda a sexta</th><td>08h–12h e 14h–18h</td></tr>
-      <tr data-dias="6"><th>Sábado</th><td>08h–12h</td></tr>
-      <tr data-dias="0"><th>Domingo</th><td>Fechado</td></tr>
-    </table>
-    <div class="acoes">
-      <a class="btn btn-zap" data-zap href="#" target="_blank" rel="noopener">WhatsApp (95) 99135-7558</a>
-      <a class="btn btn-borda" href="https://instagram.com/gbr_tatico" target="_blank" rel="noopener">Instagram @gbr_tatico</a>
+        <div class="hero-logo">
+          <div class="brand-mark brand-mark-large">
+            <span>GBR</span><i></i>
+          </div>
+          <div class="hero-logo-caption">
+            EQUIPAMENTOS TÁTICOS
+          </div>
+        </div>
+
+        <p class="eyebrow">
+          PREPARAÇÃO • SEGURANÇA • QUALIDADE
+        </p>
+
+        <h1>
+          O EQUIPAMENTO CERTO<br>
+          PARA <em>QUEM EXIGE MAIS.</em>
+        </h1>
+
+        <p class="hero-text">
+          Encontre equipamentos e acessórios táticos
+          para acompanhar sua rotina, com atendimento
+          especializado em Boa Vista.
+        </p>
+
+        <a class="button button-primary" href="#produtos">
+          CONHEÇA NOSSOS PRODUTOS →
+        </a>
+
+      </div>
+
+      <div class="hero-points">
+        <div>
+          <b class="point-icon">✓</b>
+          <span>
+            <strong>Qualidade</strong>
+            <small>Produtos selecionados</small>
+          </span>
+        </div>
+
+        <div>
+          <b class="point-icon">✦</b>
+          <span>
+            <strong>Variedade</strong>
+            <small>Diversas categorias</small>
+          </span>
+        </div>
+
+        <div>
+          <b class="point-icon">↗</b>
+          <span>
+            <strong>Atendimento</strong>
+            <small>Estamos aqui para ajudar</small>
+          </span>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="mapa">
-    <!-- Cole aqui o iframe do Google Maps (Compartilhar > Incorporar mapa) -->
-    <div class="ph" data-rotulo="Mapa do Google Maps"></div>
-  </div>
-</section>
-</main>
 
-<footer>
-  <img src="img/logo.svg" alt="GBR Equipamentos Táticos">
-  <p>© <span id="ano"></span> GBR Equipamentos Táticos. Todos os direitos reservados.</p>
-</footer>
+    <!-- INFORMAÇÕES -->
+    <div class="container info-strip">
 
-<a class="zap-flutuante" data-zap href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.1 14.9l-.3-.2-2.6.7.7-2.5-.2-.3A8 8 0 0 1 12 4Z"/></svg>
-</a>
-<script src="js/script.js"></script>
+      <div class="info-item">
+        <span class="info-symbol">◷</span>
+        <strong>HORÁRIO:</strong>
+        <span>Seg. a Sex. 08h–12h / 14h–18h | Sáb. 08h–12h</span>
+      </div>
+
+      <a class="info-item" href="https://instagram.com/gbr_tatico">
+        <span class="info-symbol">◎</span>
+        <strong>@gbr_tatico</strong>
+      </a>
+
+      <a class="info-item" href="https://wa.me/5595991357558">
+        <span class="info-symbol">◉</span>
+        <strong>(95) 99135-7558</strong>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <section class="section categories-section" id="categorias">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span></span>
+        <h2>NOSSAS <em>CATEGORIAS</em></h2>
+        <span></span>
+      </div>
+
+      <div class="category-grid">
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">▣</span>
+          <strong>Mochilas e Bolsas</strong>
+        </a>
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">◈</span>
+          <strong>Coletes Táticos</strong>
+        </a>
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">⌑</span>
+          <strong>Acessórios</strong>
+        </a>
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">♨</span>
+          <strong>Camping e Sobrevivência</strong>
+        </a>
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">⚒</span>
+          <strong>Cutelaria</strong>
+        </a>
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">♜</span>
+          <strong>Lanternas</strong>
+        </a>
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">✚</span>
+          <strong>Primeiros Socorros</strong>
+        </a>
+
+        <a class="category-card" href="#produtos">
+          <span class="category-icon">＋</span>
+          <strong>E muito mais!</strong>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="section products-section" id="produtos">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span></span>
+        <h2>DESTAQUES <em>DA LOJA</em></h2>
+        <span></span>
+      </div>
+
+      <p class="section-intro">
+        Confira alguns produtos disponíveis na GBR.
+      </p>
+
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="assets/mochila.jpg" alt="Mochila tática">
+          </div>
+
+          <div class="product-info">
+            <span class="product-tag">DESTAQUE</span>
+            <h3>Mochilas Táticas</h3>
+            <p>Modelos para diferentes necessidades.</p>
+
+            <a class="button button-small whatsapp-product"
+               href="#" data-product="Mochilas Táticas">
+              Consultar no WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="assets/colete.jpg" alt="Colete tático">
+          </div>
+
+          <div class="product-info">
+            <span class="product-tag">DESTAQUE</span>
+            <h3>Coletes Táticos</h3>
+            <p>Confira os modelos disponíveis.</p>
+
+            <a class="button button-small whatsapp-product"
+               href="#" data-product="Coletes Táticos">
+              Consultar no WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="assets/camping.jpg" alt="Equipamentos de camping">
+          </div>
+
+          <div class="product-info">
+            <span class="product-tag">DESTAQUE</span>
+            <h3>Camping e Aventura</h3>
+            <p>Itens para atividades ao ar livre.</p>
+
+            <a class="button button-small whatsapp-product"
+               href="#" data-product="Camping e Aventura">
+              Consultar no WhatsApp
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-photo">
+            <img src="assets/acessorios.jpg" alt="Acessórios táticos">
+          </div>
+
+          <div class="product-info">
+            <span class="product-tag">DESTAQUE</span>
+            <h3>Acessórios Táticos</h3>
+            <p>Conheça nossa variedade de acessórios.</p>
+
+            <a class="button button-small whatsapp-product"
+               href="#" data-product="Acessórios Táticos">
+              Consultar no WhatsApp
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE A EMPRESA -->
+  <section class="about-section" id="sobre">
+
+    <div class="container about-grid">
+
+      <div class="about-image">
+        <img src="assets/interior-gbr.png" alt="Interior da GBR">
+      </div>
+
+      <div class="about-copy">
+
+        <span class="eyebrow">CONHEÇA A GBR</span>
+
+        <h2>
+          SEU EQUIPAMENTO.<br>
+          <em>SUA MISSÃO.</em>
+        </h2>
+
+        <p>
+          A GBR Equipamentos Táticos reúne produtos
+          e acessórios para quem procura variedade,
+          qualidade e atendimento próximo.
+          Venha conhecer nossa loja em Boa Vista, Roraima.
+        </p>
+
+        <a class="button button-primary" href="#contato">
+          FALE COM NOSSA EQUIPE →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VISITE A LOJA -->
+  <section class="store-section">
+
+    <div class="store-photo">
+      <img src="assets/fachada-gbr.png" alt="Fachada GBR">
+    </div>
+
+    <div class="store-message">
+
+      <span class="eyebrow">VENHA NOS VISITAR</span>
+
+      <h2>VISITE NOSSA <em>LOJA</em></h2>
+
+      <p>
+        Conheça de perto nossa variedade
+        de equipamentos táticos.
+      </p>
+
+      <div class="store-location">
+        ⌖ Boa Vista / RR
+      </div>
+
+      <a class="button button-primary"
+         href="https://www.google.com/maps/search/?api=1&query=GBR+Equipamentos+Taticos+Boa+Vista+RR"
+         target="_blank">
+        COMO CHEGAR →
+      </a>
+
+    </div>
+
+    <div class="store-photo">
+      <img src="assets/produtos-prateleira.png" alt="Produtos GBR">
+    </div>
+
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact-section section" id="contato">
+
+    <div class="container contact-grid">
+
+      <div>
+        <span class="eyebrow">FALE COM A GBR</span>
+
+        <h2>
+          PRECISA DE AJUDA<br>
+          PARA ESCOLHER?
+        </h2>
+
+        <p>
+          Entre em contato com nossa equipe
+          ou acompanhe as novidades nas redes sociais.
+        </p>
+      </div>
+
+      <div class="contact-links">
+
+        <a href="https://wa.me/5595991357558">
+          <span>◉</span>
+          <div>
+            <small>WHATSAPP</small>
+            <strong>(95) 99135-7558</strong>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/gbr_tatico">
+          <span>◎</span>
+          <div>
+            <small>INSTAGRAM</small>
+            <strong>@gbr_tatico</strong>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="hours-box">
+        <h3>HORÁRIO DE ATENDIMENTO</h3>
+
+        <p>
+          <strong>Segunda a sexta</strong><br>
+          08h às 12h • 14h às 18h
+        </p>
+
+        <p>
+          <strong>Sábado</strong><br>
+          08h às 12h
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+
+    <div class="container footer-main">
+
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark">
+          <span>GBR</span><i></i>
+        </span>
+        <span class="brand-caption">EQUIPAMENTOS TÁTICOS</span>
+      </a>
+
+      <p>
+        Sua segurança em primeiro lugar.<br>
+        Variedade, qualidade e atendimento.
+      </p>
+
+      <div>
+        <h3>CONTATO</h3>
+        <a href="https://wa.me/5595991357558">(95) 99135-7558</a>
+        <a href="https://instagram.com/gbr_tatico">@gbr_tatico</a>
+      </div>
+
+      <div>
+        <h3>HORÁRIOS</h3>
+        <p>Seg. a Sex. 08h–12h / 14h–18h</p>
+        <p>Sáb. 08h–12h</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> GBR Equipamentos Táticos.
+      Todos os direitos reservados.
+    </div>
+
+  </footer>
+
+  <a class="back-top" href="#inicio">↑</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
